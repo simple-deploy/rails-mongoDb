@@ -3,7 +3,6 @@ class Api::V1::ProjectsController < ApiController
 
   def index
     @projects = current_user.projects.all.order(created_at: :desc)
-  # render json:@projects
   end
 
   def show
